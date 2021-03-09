@@ -149,9 +149,22 @@ a:hover {
 .d-bloc h4 a:hover,
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
-.d-bloc p a:hover {
+.d-bloc p a:hover,
+.citation {
     color: rgba(255, 255, 255, 1);
 }
+
+.citation {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 1.3rem;
+}
+.citation strong{
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
