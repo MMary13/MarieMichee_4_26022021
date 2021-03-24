@@ -7,6 +7,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+div > p {
+    font-size: 16px;
+}
+
 a,
 button {
     transition: all .3s ease-in-out;
@@ -14,6 +18,11 @@ button {
 }
 
 a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:focus {
     text-decoration: none;
     cursor: pointer;
 }
@@ -123,7 +132,6 @@ a:hover {
 .d-bloc .navbar a,
 .d-bloc .navbar-brand,
 .d-bloc a .icon-sm,
-.d-bloc a .icon-md,
 .d-bloc a .icon-lg,
 .d-bloc a .icon-xl,
 .d-bloc h1 a,
@@ -134,6 +142,9 @@ a:hover {
 .d-bloc h6 a,
 .d-bloc p a {
     color: rgba(255, 255, 255, .6);
+}
+.d-bloc a .icon-md {
+    color: #333333;
 }
 
 .d-bloc .a-btn:hover,
@@ -149,9 +160,22 @@ a:hover {
 .d-bloc h4 a:hover,
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
-.d-bloc p a:hover {
+.d-bloc p a:hover,
+.citation {
     color: rgba(255, 255, 255, 1);
 }
+
+.citation {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 1.3rem;
+}
+.citation strong{
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
 
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
@@ -171,7 +195,7 @@ a:hover {
     color: rgba(0, 0, 0, .7);
 }
 
-.d-bloc .panel icon {
+.d-bloc .panel .icon {
     border-color: rgba(0, 0, 0, .7);
 }
 
@@ -227,11 +251,27 @@ a:hover {
 .l-bloc h1 a,
 .l-bloc h2 a,
 .l-bloc h3 a,
-.l-bloc h4 a,
-.l-bloc h5 a,
-.l-bloc h6 a,
 .l-bloc p a {
     color: rgba(0, 0, 0, .6);
+}
+
+.d-bloc .panel .a-btn:focus,
+.l-bloc .a-btn:focus,
+.l-bloc .navbar a:focus,
+.l-bloc .navbar-brand:focus,
+.l-bloc .navbar-toggle:focus,
+.d-bloc .bold-link:focus,
+a:focus + h2,
+a:focus +h3 {
+    background-color: #F3976C;
+}
+
+.btn-atomic-tangerine:focus {
+    background-color: #FFFFFF;
+}
+footer a:focus,
+footer a:focus>span {
+    background-color: #FFFFFF;
 }
 
 .d-bloc .panel .a-btn:hover,
@@ -245,9 +285,6 @@ a:hover {
 .l-bloc h1 a:hover,
 .l-bloc h2 a:hover,
 .l-bloc h3 a:hover,
-.l-bloc h4 a:hover,
-.l-bloc h5 a:hover,
-.l-bloc h6 a:hover,
 .l-bloc p a:hover {
     color: rgba(0, 0, 0, 1);
 }
@@ -263,6 +300,7 @@ a:hover {
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
+
 
 .voffset {
     margin-top: 30px;
@@ -325,7 +363,7 @@ a:hover {
 .nav > li {
     float: left;
     margin-top: 4px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
@@ -739,8 +777,15 @@ h4 {
     color: #FFFFFF!important;
 }
 
+.dark {
+    color: #333333!important;
+}
+
 .portfolio-thumb {
     margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .portfolio-row {
@@ -778,14 +823,15 @@ h4 {
     color: #F3976C!important;
 }
 
+
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #333333!important;
 }
 
 .btn-atomic-tangerine:hover {
     background: #c27956!important;
-    color: #FFFFFF!important;
+    color: #333333!important;
 }
 
 .ltc-white {
@@ -822,7 +868,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -848,13 +894,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
